@@ -4,6 +4,11 @@ const bodyParser = require("body-parser")
 const cookieParser = require("cookie-parser")
 const app = express()
 
+import https from 'https'
+import fs from 'fs'
+
+
+
 const categoryRoutes = require("./routes/category")
 const vendorRoutes = require("./routes/vendor")
 const userRoutes = require("./routes/users")
@@ -22,6 +27,11 @@ app.use(categoryRoutes)
 app.use(vendorRoutes)
 app.use(userRoutes)
 
-app.listen(443, ()=>{
+app.listen(5200, ()=>{
     console.log("API")
 })
+
+https.createServer({
+    cert: fs.readFileSync('SSL/code.crt'),
+    key: fs.readFileSync('SSL/code.key')
+}, app.listen(3001))
