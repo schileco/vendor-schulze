@@ -1,11 +1,12 @@
+const https = require("https")
+const fs = require("fs")
 const express = require("express")
 const cors = require("cors")
 const bodyParser = require("body-parser")
 const cookieParser = require("cookie-parser")
 const app = express()
 
-import https from 'https'
-import fs from 'fs'
+
 
 
 
