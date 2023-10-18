@@ -22,6 +22,6 @@ app.use(categoryRoutes)
 app.use(vendorRoutes)
 app.use(userRoutes)
 
-app.listen(5200, ()=>{
+app.listen(443, ()=>{
     console.log("API")
 })
