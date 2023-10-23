@@ -31,8 +31,11 @@ app.use(userRoutes)
 app.listen(5200, ()=>{
     console.log("API")
 })
-
-https.createServer({
-    cert: fs.readFileSync('SSL/code.crt'),
-    key: fs.readFileSync('SSL/code.key')
-}, app).listen(5300)
+try{
+    https.createServer({
+        cert: fs.readFileSync('SSL/code.crt'),
+        key: fs.readFileSync('SSL/code.key')
+    }, app).listen(5300)
+}catch(error){
+    console.log(error)
+}
