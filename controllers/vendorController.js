@@ -32,6 +32,7 @@ const searchState = async(req, res) => {
     const vendorCategory = req.params.category
     const {vendorState} = req.body
     const results = await Vendor.find({vendorState:vendorState,vendorCategory:vendorCategory})
+    console.log("API responde", results)
     res.json(results)
 }
 
