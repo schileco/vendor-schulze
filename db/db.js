@@ -1,6 +1,5 @@
 const mongoose = require("mongoose")
 
-/*const mongoURI = "mongodb://127.0.0.1:27017/vendor"*/
 const mongoURI = "mongodb+srv://vendorschulze:lEWRTMJNijcjM4a8@cluster0.qpe3lbr.mongodb.net/vendor?retryWrites=true&w=majority"
 
 mongoose.connect(mongoURI, {
